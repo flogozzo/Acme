@@ -1,0 +1,64 @@
+
+1. flights controller tests
+
+	-get all flights
+	
+	URL: /api/flights
+
+
+	-get available flights based on start/end dates and available seats
+	
+	URL: /api/flights?startDate=2018-mar-01&endDate=2018-mar-5&availSeats=1
+
+
+
+
+2. bookings controller tests
+
+
+	-get bookings based on optional filters
+
+	URL:  	/api/bookings?passengerName=Max Haler&date=2018-mar-02&arrivalCity=CityB&departerCity=CityA&flightNumber=1
+			/api/bookings?passengerName=Linda A&date=2018-mar-02
+			/api/bookings?flightNumber=2
+
+
+	
+	-create bookings
+	
+	
+	URL: /api/bookings
+	
+	JSON:
+	
+	-invalid flight
+	
+		{
+		"PassengerName": "John SMith",
+		"Date":"2018-mar-02",
+		"FlightNo":"44"
+		}
+
+	-no available seats
+	
+		{
+		"PassengerName": "John SMith",
+		"Date":"2018-mar-02",
+		"FlightNo":"2"
+		}
+
+	-already booked in
+	
+		{
+		"PassengerName": "Karen Lom",
+		"Date":"2018-mar-05",
+		"FlightNo":"2"
+		}
+
+	-valid booking
+	
+		{
+		"PassengerName": "James B",
+		"Date":"2018-mar-07",
+		"FlightNo":"5"
+		}

@@ -1,0 +1,16 @@
+Assumptions
+
+	-Times are in 24hr time format.
+	-Each booking is for a max. of one seat.
+	-The same person cannot book the same flight number more than once on a given day.
+	-Each new booking must contain a valid flight number.
+	-A booking will be rejected if there are no available seats on a flight for a given date.
+
+
+
+Architecture assumptions for this API
+
+	-Paging will not be implemented.
+	-Security will not be implemented.
+	-Versioning will not be implemented.
+
